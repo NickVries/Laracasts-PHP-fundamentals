@@ -3,12 +3,12 @@
 <h1>Submit your details!</h1>
 <form action="/details" method="POST">
     First name: <br>
-    <input type="text" name="firstname" value="Nick"><br>
+    <input type="text" name="firstname"><br>
     Last name: <br>
-    <input type="text" name="lastname" value="de Vries"><br>
+    <input type="text" name="lastname"><br>
     Gender: <br>
     <label>
-        <input type="radio" name="gender" value="male" checked>Male<br>
+        <input type="radio" name="gender" value="male">Male<br>
     </label>
     <label>
         <input type="radio" name="gender" value="female">Female<br>
