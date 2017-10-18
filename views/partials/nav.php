@@ -1,3 +1,5 @@
+<?php use App\Core\Request; ?>
+
 <nav>
     <ul>
         <li><a href="<?= Request::baseUrl(); ?>/">Home</a></li>

@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Core\Database;
+
 class QueryBuilder
 {
     /** @var PDO */
@@ -16,7 +18,7 @@ class QueryBuilder
 
         $statement->execute();
 
-        return $statement->fetchAll(PDO::FETCH_CLASS);
+        return $statement->fetchAll(\PDO::FETCH_CLASS);
     }
 
     public function insertInto($table, $parameters)
@@ -67,7 +69,7 @@ class QueryBuilder
 
         $statement->execute();
 
-        return $statement->fetchAll(PDO::FETCH_CLASS);
+        return $statement->fetchAll(\PDO::FETCH_CLASS);
     }
 
     public function selectLastFrom($table, $number = 1)
@@ -77,6 +79,6 @@ class QueryBuilder
         );
         $statement->execute();
 
-        return $statement->fetchALL(PDO::FETCH_ASSOC);
+        return $statement->fetchALL(\PDO::FETCH_ASSOC);
     }
 }

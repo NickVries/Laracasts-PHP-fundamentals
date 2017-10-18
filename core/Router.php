@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Core;
+
 class Router
 {
     public $routes = [
@@ -47,7 +49,7 @@ class Router
     {
         $controllerInstance = new $controller;
         if (! method_exists($controllerInstance, $action)) {
-            throw new Exception(
+            throw new \Exception(
                 "{$controller} does not respond to the {$action} action."
             );
         }
