@@ -2,6 +2,7 @@ html, body {
     background: #cecece;
     margin: 0;
     padding: 30px 30px;
+    font-family: Arial, sans-serif;
 }
 
 nav ul {
@@ -26,6 +27,12 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #111;
+}
+
+form input {
+    margin: 5px 0;
+    padding: 4px;
+    font-size: 14px;
 }
 
 /*h1 {*/

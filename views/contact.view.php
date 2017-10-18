@@ -2,10 +2,10 @@
 <h1>Contact us</h1>
 <ul>
     <li>
-        Telephone: <?= $phone; ?>
+        Telephone: <?= $contactDetails['phone']; ?>
     </li>
     <li>
-        E-mail: <?= $mail; ?>
+        E-mail: <?= $contactDetails['mail']; ?>
     </li>
 </ul>
 <?php require 'partials/footer.php'; ?>

@@ -4,22 +4,39 @@ class PagesController
 {
     public function home()
     {
-        $users = App::get('database')->selectAll('users');
-
-        require 'views/index.view.php';
+        return view('index');
     }
 
     public function about()
     {
+        $companyName = 'Nickdude';
 
+        return view('about', compact('companyName'));
     }
 
     public function contact()
     {
-        $phone = '+316 12 345 678';
-        $mail = 'blabla@gmail.com';
+        $contactDetails = [
+            'phone' => '+316 12 345 678',
+            'mail' => 'blabla@example.com'
+        ];
+        return view('contact', compact('contactDetails'));
 
-        require 'views/contact.view.php';
+    }
 
+    public function userCreated()
+    {
+        $user = $_GET['name'];
+        return view('user-created', compact('user'));
+    }
+
+    public function secret()
+    {
+        return view('secret');
+    }
+
+    public function page404()
+    {
+        return view('404');
     }
 }
